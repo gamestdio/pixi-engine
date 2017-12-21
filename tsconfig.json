@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "lib",
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "module": "commonjs",
+    "experimentalDecorators": true
+  }
+}

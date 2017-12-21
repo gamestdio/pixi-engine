@@ -1,0 +1,38 @@
+{
+  "name": "pixi-engine",
+  "version": "0.1.0",
+  "description": "Engine-like utilities for developing games with PixiJS",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gamestdio/pixi-engine.git"
+  },
+  "peerDependencies": {
+    "pixi.js": "^4.6.2"
+  },
+  "keywords": [
+    "pixi",
+    "engine",
+    "unity",
+    "tools"
+  ],
+  "author": "Endel Dreyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gamestdio/pixi-engine/issues"
+  },
+  "homepage": "https://github.com/gamestdio/pixi-engine#readme",
+  "dependencies": {
+    "@gamestdio/timer": "^1.1.9"
+  },
+  "devDependencies": {
+    "@types/pixi.js": "^4.6.1",
+    "pixi.js": "^4.6.2",
+    "typescript": "^2.6.2"
+  }
+}
