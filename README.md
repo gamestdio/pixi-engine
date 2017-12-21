@@ -5,14 +5,14 @@ Provides a minimal engine-like structure for developing games with
 
 ## Classes
 
-- [Application](#Application)
-- [Mediator](#Mediator)
-- [SceneManager](#SceneManager)
-- [PlayerPrefs](#PlayerPrefs)
+- [Application](#application)
+- [Mediator](#mediator)
+- [SceneManager](#scenemanager)
+- [PlayerPrefs](#playerPrefs)
 
 ## `Application`
 
-A singleton that extends from `PIXI.Application`. You might not need to use it directly. When switching scenes using [SceneManager](#SceneManager), the `Application` is used under the hood.
+A singleton that extends from `PIXI.Application`. You might not need to use it directly. When switching scenes using [SceneManager](#scenemanager), the `Application` is used under the hood.
 
 ## `Mediator`
 
