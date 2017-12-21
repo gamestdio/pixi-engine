@@ -1,5 +1,7 @@
 # pixi-engine
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/gamestdio/pixi-engine.svg)](https://greenkeeper.io/)
+
 Provides a minimal engine-like structure for developing games with
 [PixiJS](https://github.com/pixijs/pixi.js/).
 
