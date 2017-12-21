@@ -19,6 +19,8 @@ A singleton that extends from `PIXI.Application`. You might not need to use it d
 Mediators are meant for handling business logic in your game.
 
 ```typescript
+import { Mediator } from "pixi-engine";
+
 class MenuMediator extends Mediator<MenuView> {
 
     initialize () {
@@ -64,6 +66,8 @@ Inspired by Unity, `SceneManager` handles switching the current active scene. Sc
 
 
 ```typescript
+import { SceneManager } from "pixi-engine";
+
 class MyScene extends PIXI.Container {
     // definition of your scene
 }
@@ -77,6 +81,8 @@ SceneManager.goTo(MyScene);
 Inspired by Unity, `PlayerPrefs` are meant for storing and retrieving data locally. Currently, it's just a wrapper for `localStorage`. In the future more adapters might be implemented to handle another storage option.
 
 ```typescript
+import { PlayerPrefs } from "pixi-engine";
+
 // Key-value usage
 PlayerPrefs.set("name", "Player Name");
 PlayerPrefs.set("accessToken", "1f92h3f928h39f8h2");
