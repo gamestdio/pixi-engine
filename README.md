@@ -8,7 +8,7 @@ Provides a minimal engine-like structure for developing games with
 - [Application](#application)
 - [Mediator](#mediator)
 - [SceneManager](#scenemanager)
-- [PlayerPrefs](#playerPrefs)
+- [PlayerPrefs](#playerprefs)
 
 ## `Application`
 
