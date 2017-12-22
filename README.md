@@ -10,6 +10,8 @@ Provides a minimal engine-like structure for developing games with
 - [SceneManager](#scenemanager)
 - [PlayerPrefs](#playerprefs)
 
+Also, consider using other packages such as [@gamestdio/mathf](https://github.com/gamestdio/mathf) and [@gamestdio/keycode](https://github.com/gamestdio/keycode)
+
 ## `Application`
 
 A singleton that extends from `PIXI.Application`. You might not need to use it directly. When switching scenes using [SceneManager](#scenemanager), the `Application` is used under the hood.
