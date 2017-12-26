@@ -1,7 +1,7 @@
-// 
-// PIXI.js patches 
+//
+// PIXI.js patches
 // To integrate with the engine
-// 
+//
 import * as PIXI from "pixi.js";
 import { EventEmitter } from "eventemitter3";
 
@@ -25,10 +25,10 @@ globalEvents.on("added", function(displayObject: PIXI.DisplayObject & ExtendedDi
     }
     displayObject.hasBeenAddedOnce = true;
 
-    // register "update" listener 
+    // register "update" listener
     if (
         !updateListeners.has(displayObject) &&
-        typeof (displayObject.update) === "function" && 
+        typeof (displayObject.update) === "function" &&
         !displayObject.Particle_update
     ) {
         let callback = (delta) => displayObject.update(delta);
@@ -64,6 +64,7 @@ globalEvents.on("removed", function(displayObject: PIXI.DisplayObject & Extended
     if (displayObject instanceof PIXI.Container) {
         for (let i = 0; i < displayObject.children.length; i++) {
             globalEvents.emit("removed", displayObject.children[i]);
+            displayObject.children[i].emit("remove");
         }
     }
 });

@@ -10,7 +10,7 @@ Provides a minimal engine-like structure for developing games with
 - [SceneManager](#scenemanager)
 - [PlayerPrefs](#playerprefs)
 
-Also, consider using other packages such as [@gamestdio/mathf](https://github.com/gamestdio/mathf) and [@gamestdio/keycode](https://github.com/gamestdio/keycode)
+Also, consider using other packages such as [@gamestdio/mathf](https://github.com/gamestdio/mathf) and [@gamestdio/keycode](https://github.com/gamestdio/keycode).
 
 ## `Application`
 
