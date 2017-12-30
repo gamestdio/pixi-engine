@@ -53,18 +53,20 @@ globalEvents.on("removed", function(displayObject: PIXI.DisplayObject & Extended
     const resizeCallback = resizeListeners.get(displayObject);
     if (resizeCallback) {
         window.removeEventListener("resize", resizeCallback);
+        resizeListeners.delete(displayObject);
     }
 
     const updateCallback = updateListeners.get(displayObject);
     if (updateCallback) {
         PIXI.ticker.shared.remove(updateCallback);
+        updateListeners.delete(displayObject);
     }
 
     // trigger "removed" for child objects
     if (displayObject instanceof PIXI.Container) {
         for (let i = 0; i < displayObject.children.length; i++) {
             globalEvents.emit("removed", displayObject.children[i]);
-            displayObject.children[i].emit("remove");
+            displayObject.children[i].emit("removed");
         }
     }
 });
