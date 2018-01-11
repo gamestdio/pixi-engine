@@ -19,6 +19,10 @@ export class PlayerPrefs  {
         return JSON.parse(localStorage.getItem(`${PREFIX}${key}`));
     }
 
+    static remove (key: string) {
+        localStorage.removeItem(`${PREFIX}${key}`);
+    }
+
     static clear () {
         localStorage.clear();
     }
