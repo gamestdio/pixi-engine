@@ -16,7 +16,12 @@ export class Application extends PIXI.Application {
     }
 
     onResize = () => {
+        // resize renderer
         this.renderer.resize(window.innerWidth, window.innerHeight);
+
+        // resize canvas
+        this.view.width = window.innerWidth;
+        this.view.height = window.innerHeight;
     }
 
     protected static instance: Application;
