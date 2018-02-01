@@ -26,7 +26,7 @@ export function mediate(mediatorClass: any): ClassDecorator {
             mediator.view = instance;
 
             //
-            // TODO: REFACTOR THIS 
+            // TODO: REFACTOR THIS
             // YOU PROBABLY WON'T, RIGHT?!
             // LET'S MAKE THIS COMMENT REALLY BIG THEN
             // YOU CAN REMEMBER
@@ -88,7 +88,7 @@ export function action(name: string): MethodDecorator {
 
             // call mediator method
             if (this.$mediator && this.$mediator[name]) {
-                this.$mediator[name]();
+                this.$mediator[name].apply(this.$mediator, arguments);
             }
 
             return result;
