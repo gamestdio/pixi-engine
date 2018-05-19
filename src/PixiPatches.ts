@@ -2,6 +2,7 @@
 // PIXI.js patches
 // To integrate with the engine
 //
+
 import * as PIXI from "pixi.js";
 import { EventEmitter } from "eventemitter3";
 
@@ -72,6 +73,7 @@ globalEvents.on("removed", function(displayObject: PIXI.DisplayObject & Extended
 });
 
 const addChild = PIXI.Container.prototype.addChild;
+const addChildAt = PIXI.Container.prototype.addChildAt;
 const removeChild = PIXI.Container.prototype.removeChild;
 const removeChildAt = PIXI.Container.prototype.removeChildAt;
 
@@ -81,6 +83,11 @@ function patchedAddChild<T extends PIXI.DisplayObject>(child: T, ...additionalCh
         child.on("added", () => globalEvents.emit("added", child));
     }
     return addChild.apply(this, arguments);
+}
+
+function patchedAddChildAt<T extends PIXI.DisplayObject>(child: T, index: number): T {
+    child.on("added", () => globalEvents.emit("added", child));
+    return addChildAt.apply(this, arguments);
 }
 
 function patchedRemoveChild(...children: PIXI.DisplayObject[]) {
@@ -98,5 +105,6 @@ function patchedRemoveChildAt(index: number) {
 }
 
 PIXI.Container.prototype.addChild = patchedAddChild;
+PIXI.Container.prototype.addChildAt = patchedAddChildAt;
 PIXI.Container.prototype.removeChild = patchedRemoveChild;
 PIXI.Container.prototype.removeChildAt = patchedRemoveChildAt;

@@ -1,6 +1,6 @@
 {
   "name": "pixi-engine",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Engine-like utilities for developing games with PixiJS",
   "main": "lib/index.js",
   "scripts": {
