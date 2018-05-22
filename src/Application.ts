@@ -4,7 +4,7 @@ import ClockTimer from "@gamestdio/timer";
 export class Application extends PIXI.Application {
     public static clock: ClockTimer = new ClockTimer();
 
-    constructor () {
+    constructor (opts?: PIXI.ApplicationOptions) {
         super();
 
         PIXI.ticker.shared.add(() => Application.clock.tick());
@@ -25,9 +25,9 @@ export class Application extends PIXI.Application {
     }
 
     protected static instance: Application;
-    static getInstance () {
+    static getInstance (opts?: PIXI.ApplicationOptions) {
         if (!this.instance) {
-            this.instance = new Application();
+            this.instance = new Application(opts);
         }
         return this.instance;
     }
